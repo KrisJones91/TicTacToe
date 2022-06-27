@@ -46,9 +46,14 @@ public class Program1
         char playerSign = ' ';
 
         if (player == 1)
+        {
             playerSign = 'X';
+        }
         else if (player == 2)
+        {
             playerSign = 'O';
+        }
+
 
         switch (input)
         {
