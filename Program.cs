@@ -18,6 +18,9 @@ do
         player = 2;
         Program1.EnterXorO(player, input);
     }
+
+    Program1.SetField();
+
     do
     {
         Console.WriteLine("\nPlayer {0}: Choose your field!", player);
