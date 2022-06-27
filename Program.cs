@@ -43,7 +43,7 @@ public class Program1
     }
     public static void EnterXorO(int player, int input)
     {
-        char playerSign = '';
+        char playerSign = ' ';
 
         if (player == 1)
             playerSign = 'X';
