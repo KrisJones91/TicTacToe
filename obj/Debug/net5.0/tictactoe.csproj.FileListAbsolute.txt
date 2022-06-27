@@ -1,0 +1,5 @@
+U:\project\app\tictactoe\obj\Debug\net5.0\tictactoe.csproj.AssemblyReference.cache
+U:\project\app\tictactoe\obj\Debug\net5.0\tictactoe.GeneratedMSBuildEditorConfig.editorconfig
+U:\project\app\tictactoe\obj\Debug\net5.0\tictactoe.AssemblyInfoInputs.cache
+U:\project\app\tictactoe\obj\Debug\net5.0\tictactoe.AssemblyInfo.cs
+U:\project\app\tictactoe\obj\Debug\net5.0\tictactoe.csproj.CoreCompileInputs.cache
