@@ -18,6 +18,12 @@ do
         player = 2;
         Program1.EnterXorO(player, input);
     }
+    do
+    {
+        Console.WriteLine("\nPlayer {0}: Choose your field!", player);
+        input = Convert.ToInt32(Console.ReadLine());
+    } while (!inputCorrect);
+
 
 } while (true);
 
