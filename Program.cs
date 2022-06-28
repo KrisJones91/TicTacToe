@@ -21,10 +21,82 @@ do
 
     Program1.SetField();
 
+    //check winning condition
+    char[] playerChars = { 'X', 'O' };
+    foreach (char playerChar in playerChars)
+    {
+        if (((Program1.playField[0, 0] == playerChar) && (Program1.playField[0, 1] == playerChar) && (Program1.playField[0, 2] == playerChar))
+        || ((Program1.playField[1, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
+        || ((Program1.playField[2, 0] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+        || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 0] == playerChar) && (Program1.playField[2, 0] == playerChar))
+        || ((Program1.playField[0, 1] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
+        || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+        || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+        || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 0] == playerChar))
+        )
+        {
+            Console.WriteLine("We have a winner!");
+        }
+    }
+
+
+
+
+    //Test if field is already occupied
     do
     {
         Console.WriteLine("\nPlayer {0}: Choose your field!", player);
-        input = Convert.ToInt32(Console.ReadLine());
+        try
+        {
+            input = Convert.ToInt32(Console.ReadLine());
+        }
+        catch
+        {
+            Console.WriteLine("Please, Enter a number.");
+        }
+
+        if ((input == 1) && (Program1.playField[0, 0] == '1'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 2) && (Program1.playField[0, 1] == '2'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 3) && (Program1.playField[0, 1] == '3'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 4) && (Program1.playField[1, 0] == '4'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 5) && (Program1.playField[1, 1] == '5'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 6) && (Program1.playField[1, 2] == '6'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 7) && (Program1.playField[2, 0] == '7'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 8) && (Program1.playField[2, 1] == '8'))
+        {
+            inputCorrect = true;
+        }
+        else if ((input == 9) && (Program1.playField[2, 2] == '9'))
+        {
+            inputCorrect = true;
+        }
+        else
+        {
+            Console.WriteLine("\n Incorrect input! Please use another field!");
+            inputCorrect = false;
+        }
+
     } while (!inputCorrect);
 
 
