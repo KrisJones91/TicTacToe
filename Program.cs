@@ -51,6 +51,14 @@ do
 
             break;
         }
+        else if (Program1.turns == 10)
+        {
+            Console.WriteLine("\n DRAW! Try again?");
+            Console.WriteLine("Please press any key to reset the game.");
+            Console.ReadKey();
+            Program1.ResetField();
+            break;
+        }
     }
 
 
@@ -125,16 +133,15 @@ public class Program1
     {'7','8','9'}, // row 2
 };
 
-    public static char[,] playFieldInitial =
-    {
-    {'1','2','3'}, //row 0
-    {'4','5','6'}, // row 1
-    {'7','8','9'}, // row 2
-    };
-
-    static int turns = 0;
+    public static int turns = 0;
     public static void ResetField()
     {
+        char[,] playFieldInitial =
+       {
+        {'1','2','3'}, //row 0
+        {'4','5','6'}, // row 1
+        {'7','8','9'}, // row 2
+        };
         playField = playFieldInitial;
         turns = 0;
         SetField();
