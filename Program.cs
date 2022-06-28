@@ -44,7 +44,12 @@ do
             {
                 Console.WriteLine("\n Player 1 is the WINNER!");
             }
+            Console.WriteLine("Please press any key to reset the game!");
+            Console.ReadKey();
 
+            Program1.ResetField();
+
+            break;
         }
     }
 
@@ -127,9 +132,11 @@ public class Program1
     {'7','8','9'}, // row 2
     };
 
+    static int turns = 0;
     public static void ResetField()
     {
         playField = playFieldInitial;
+        turns = 0;
         SetField();
 
     }
@@ -145,6 +152,7 @@ public class Program1
         Console.WriteLine("     |     |     ");
         Console.WriteLine("  {0}  |  {1}  |  {2}", playField[2, 0], playField[2, 1], playField[2, 2]);
         Console.WriteLine("     |     |     ");
+        turns++;
     }
     public static void EnterXorO(int player, int input)
     {
