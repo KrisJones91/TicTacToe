@@ -26,16 +26,25 @@ do
     foreach (char playerChar in playerChars)
     {
         if (((Program1.playField[0, 0] == playerChar) && (Program1.playField[0, 1] == playerChar) && (Program1.playField[0, 2] == playerChar))
-        || ((Program1.playField[1, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
-        || ((Program1.playField[2, 0] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
-        || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 0] == playerChar) && (Program1.playField[2, 0] == playerChar))
-        || ((Program1.playField[0, 1] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
-        || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
-        || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
-        || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 0] == playerChar))
+            || ((Program1.playField[1, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
+            || ((Program1.playField[2, 0] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+            || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 0] == playerChar) && (Program1.playField[2, 0] == playerChar))
+            || ((Program1.playField[0, 1] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[1, 2] == playerChar))
+            || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[2, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+            || ((Program1.playField[0, 0] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 2] == playerChar))
+            || ((Program1.playField[0, 2] == playerChar) && (Program1.playField[1, 1] == playerChar) && (Program1.playField[2, 0] == playerChar))
         )
+
         {
-            Console.WriteLine("We have a winner!");
+            if (playerChar == 'X')
+            {
+                Console.WriteLine("\n Player 2 is the WINNER!");
+            }
+            else
+            {
+                Console.WriteLine("\n Player 1 is the WINNER!");
+            }
+
         }
     }
 
@@ -110,6 +119,21 @@ public class Program1
     {'4','5','6'}, // row 1
     {'7','8','9'}, // row 2
 };
+
+    public static char[,] playFieldInitial =
+    {
+    {'1','2','3'}, //row 0
+    {'4','5','6'}, // row 1
+    {'7','8','9'}, // row 2
+    };
+
+    public static void ResetField()
+    {
+        playField = playFieldInitial;
+        SetField();
+
+    }
+
     public static void SetField()
     {
         Console.WriteLine("     |     |     ");
